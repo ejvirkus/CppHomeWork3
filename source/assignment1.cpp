@@ -13,15 +13,20 @@ Homework::Tasks Homework::assignment1()
     using namespace std::literals;
 
     // Loo el nimeline argumentideta lambda funktsioon
-    
+    auto el = []() {
 
+    };
     // Loo ilr1 nimeline lambda funktsioon, 
     // mis võtab argumendiks 2 inti (i, j) ja tagastab nende summa
-    
+    auto ilr1 = [](int i, int j) {
+        std::cout << i + j;
+    };
 
     // Loo irl2 nimeline lambda funktsioon, 
     // mis võtab argumendiks int viida (i) ja suurendab seda 1 võrra
-    
+    auto ilr2 = [](int i) {
+        std::cout << i + 1;
+    };
     
 
     // Kontroll, et muutujad on õiget tüüpi ja väärtusega

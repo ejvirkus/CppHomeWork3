@@ -13,16 +13,35 @@ Homework::Tasks Homework::assignment2()
     using namespace std::literals;
 
     // Kasuta klassi A, et luua muutuja a
+    class A {
+        public:
+            int a;
+    };
     
     // Kasuta klassi B, et luua muutuja b
-    
+    class B {
+        public:
+            int b;
+    };
+
     // Kasuta structi D, et luua muutuja d
-    
+    struct {
+        public:
+            int d;
+    } D;
+
     // Kasuta structi D, et luua muutuja d1, mis võtab argumendiks a ja 1
+    struct {
+        public:
+            int d1(int a, 1);
+    } D;
     
     // Kasuta structi E, et luua muutuja e
     // Siis, muuda liikme number väärtuseks 3
-    
+    struct {
+        public:
+            int e;
+    } E;
     
 
     

@@ -9,34 +9,80 @@
 
 // Definitsioonid klassile Op
 // Vihje: alusta Homework:: namespace'ist
-
+namespace Homework {
+    class Default {
+    public:
 // Loo vaikiva konstruktori, ilma argumentideta
-
+        Default() = default;
 // Loo konstruktor, mis võtab argumendiks float nimetusega i
 // ja seab number väärtuseks i
-
+        Default(float i) : number(i) {}
 // Loo Copy konstruktor
-
+        Default(const Default& other) : number(other.number) {}
 // Loo Move konstruktor
-
+        Default(Default&& other) noexcept : number(std::exchange(other.number, 0)) {}
 // Loo Copy omistamise operaator
-
-
-    
-    
-
+        Default& operator=(const Default& other) {
+            if (this != &other) {
+                number = other.number;
+            }
+            return *this;
+        }
 // Loo Move omistamise operaator
-
-
-    
-    
-
+        Default& operator=(Default&& other) noexcept {
+            number = std::exchange(other.number, 0);
+            return *this;
+        }
 // Loo Võrdlus operaator
+        auto operator<=>(const Default&) const = default;
+// Loo Spaceship <=> operaator
+        auto operator<=>(const Default& other) const {
+            return number <=> other.number;
+        }
+
+
+    private:
+    float number = 0.0f;
+    };
+
+    class Op{
+        public:
+            Op() = default;
+
+            Op(float i) : number(i) {}
+
+            Op(const Op& other) : number(other.number) {}
+
+            Op(Op&& other) noexcept : number(std::exchange(other.number, 0)) {}
+
+            Op& operator=(const Op& other) {
+                if (this != &other) {
+                    number = other.number;
+                }
+                return *this;
+            }
+
+            Op& operator=(Op&& other) noexcept {
+                number = std::exchange(other.number, 0);
+                return *this;
+            }
+
+            auto operator<=>(const Op&) const = default;
+
+            auto operator<=>(const Default& other) const {
+               return number <=> other.number;
+            } 
+              
+        private:
+            float number = 0.0f;
+    };
+};
+
+
 
 
     
 
-// Loo Spaceship <=> operaator
 
 
     
