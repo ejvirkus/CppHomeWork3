@@ -1,7 +1,8 @@
-#include <iostream>
+#include <ostream>
 #include <cassert>
 #include <functional>
 #include <string>
+#include <vector>
 #include "../include/main.hpp"
 #include "../include/support.hpp"
 #include "../include/assignment1.hpp"

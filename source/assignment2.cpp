@@ -5,7 +5,7 @@
 #include <vector>
 #include <array>
 #include <memory>
-#include <iostream>
+#include <ostream>
 
 // Klassid
 Homework::Tasks Homework::assignment2()
@@ -33,7 +33,7 @@ Homework::Tasks Homework::assignment2()
     // Kasuta structi D, et luua muutuja d1, mis võtab argumendiks a ja 1
     struct {
         public:
-            int d1(int a, 1);
+            int d1(int a,   );
     } D;
     
     // Kasuta structi E, et luua muutuja e

@@ -5,7 +5,8 @@
 #include <vector>
 #include <array>
 #include <memory>
-#include <iostream>
+#include <ostream>
+#include <vector>
 
 // Definitsioonid klassile Op
 // Vihje: alusta Homework:: namespace'ist
