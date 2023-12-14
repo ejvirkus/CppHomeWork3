@@ -49,7 +49,7 @@ namespace Homework
         }
 
         constexpr void set_number(int i) {
-            number = 1;
+            number = i;
         }
     };
     
